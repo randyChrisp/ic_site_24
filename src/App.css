@@ -95,7 +95,7 @@ body {
   display: grid;
   grid-template-rows: min-content 1fr;
 
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 /* make images easier to work with */
