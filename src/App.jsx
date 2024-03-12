@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./components/Header";
 import Carousel from "./components/Carousel";
-import Home from "./pages/Home";
+import Footer from "./components/Footer";
 import "./App.css";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
           <Carousel />
         </div>
         <div>
-          <Home />
+          <Footer />
         </div>
       </div>
     </>

@@ -299,7 +299,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  /* padding: 1rem; */
 }
 .nav-toggle {
   font-size: 1.5rem;
@@ -343,12 +343,13 @@ nav {
 }
 @media screen and (min-width: 800px) {
   .nav-center {
+    height: 10vh;
     max-width: 1170px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
+    background-color: black;
   }
   .nav-header {
     padding: 0;
@@ -378,5 +379,23 @@ nav {
   }
   .social-icons a:hover {
     color: var(--clr-primary-7);
+  }
+
+  /* ------------------- */
+  /*      Home          */
+  /* ------------------- */
+
+  .home {
+    background-color: var(--clr-white);
+  }
+
+  /* ------------------- */
+  /*      Footer         */
+  /* ------------------- */
+
+  footer {
+    height: 5vh;
+    display: flex;
+    justify-content: center;
   }
 }

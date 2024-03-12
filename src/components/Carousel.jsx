@@ -3,10 +3,10 @@ import "./Carousel.css";
 import { useEffect } from "react";
 import apps from "../images/pexels-apps.jpg";
 import black_techs from "../images/black_techs.jpg";
-import code from "../images/pexels-code.jpg";
+import code from "../images/html.jpg";
 import ww from "../images/WW_bizcard.png";
-import switches from "../images/pexels-switch.jpg";
-import server from "../images/pexels-servers.jpg";
+import switches from "../images/slide22.jpg";
+import server from "../images/server_room.jpg";
 import repair from "../images/repair.png";
 
 const Carousel = () => {
@@ -137,7 +137,7 @@ const Carousel = () => {
               </div>
             </li>
           </ul>
-          <nav className="nav-carousel">
+          <nav className="carousel-nav">
             <button className="btn prev" name="arrow-back-outline">
               &#8249;
             </button>
@@ -147,9 +147,6 @@ const Carousel = () => {
           </nav>
         </main>
       </div>
-
-      <script></script>
-      <script></script>
     </>
   );
 };
