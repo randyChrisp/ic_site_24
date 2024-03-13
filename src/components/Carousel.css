@@ -117,6 +117,7 @@ main {
   user-select: none;
 
   & .btn {
+    line-height: normal;
     background-color: rgba(255, 255, 255, 0.5);
     color: rgba(0, 0, 0, 0.7);
     border: 2px solid rgb(0, 0, 0);

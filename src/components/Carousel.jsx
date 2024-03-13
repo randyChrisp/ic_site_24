@@ -46,9 +46,11 @@ const Carousel = () => {
                 <h2 className="title">"IT Consulting"</h2>
                 <p className="description">
                   {" "}
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Tempore fuga voluptatum, iure corporis inventore praesentium
-                  nisi. Id laboriosam ipsam enim.{" "}
+                  Unlock the full potential of your organization's IT
+                  infrastructure with our specialized consulting services. At
+                  Innovative Connexions, we understand that every business is
+                  unique, which is why we offer personalized IT consulting
+                  solutions tailored to your specific needs and goals.{" "}
                 </p>
                 <button>Read More</button>
               </div>
@@ -63,9 +65,11 @@ const Carousel = () => {
                 <h2 className="title">"Mobile Applications"</h2>
                 <p className="description">
                   {" "}
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Tempore fuga voluptatum, iure corporis inventore praesentium
-                  nisi. Id laboriosam ipsam enim.{" "}
+                  Elevate your business with custom-designed mobile applications
+                  that cater to your unique needs and objectives. At Innovative
+                  Connexions, we specialize in crafting original, user-friendly
+                  mobile apps that drive engagement, streamline processes, and
+                  enhance brand visibility.{" "}
                 </p>
                 <button>Read More</button>
               </div>

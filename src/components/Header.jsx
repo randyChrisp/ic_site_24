@@ -33,28 +33,26 @@ const Header = () => {
         {/* social media */}
         <ul className="social-icons">
           <li>
-            <a href="https://www.twitter.com">
+            <a href="https://www.facebook.com/webwondersinc" target="_blank">
               <i className="fab fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a href="https://www.twitter.com">
+            <a href="https://twitter.com/Web_Wonders_Inc" target="_blank">
               <i className="fab fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a href="https://www.twitter.com">
-              <i className="fab fa-behance"></i>
+            <a
+              href="https://www.instagram.com/web_wonders_inc/"
+              target="_blank"
+            >
+              <i className="fab fa-instagram"></i>
             </a>
           </li>
           <li>
-            <a href="https://www.twitter.com">
+            <a href="www.linkedin.com/in/randy-chrisp" target="_blank">
               <i className="fab fa-linkedin"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.twitter.com">
-              <i className="fab fa-sketch"></i>
             </a>
           </li>
         </ul>
