@@ -1,18 +1,74 @@
 import React from "react";
 import "./Carousel.css";
-import { useEffect } from "react";
+import { useEffect, useState, useCallback } from "react";
 import apps from "../images/pexels-apps.jpg";
 import black_techs from "../images/black_techs.jpg";
 import code from "../images/html.jpg";
 import ww from "../images/WW_bizcard.png";
 import switches from "../images/slide22.jpg";
 import server from "../images/server_room.jpg";
-import repair from "../images/repair.png";
+import Modal from "./Modal";
 
 const Carousel = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [selectedService, setSelectedService] = useState(null);
+
+  const openModal = (service) => {
+    setSelectedService(service);
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
+  const [services, setServices] = useState([
+    {
+      id: 1,
+      title: "IT Consulting",
+      image: `${black_techs}`,
+      description:
+        "Unlock the full potential of your organization's IT infrastructure with our specialized consulting services. At Innovative Connexions, we understand that every business is unique, which is why we offer personalized IT consulting solutions tailored to your specific needs and goals.",
+    },
+    {
+      id: 2,
+      title: "Mobile Applications",
+      image: `${apps}`,
+      description:
+        "Elevate your business with custom-designed mobile applications that cater to your unique needs and objectives. At Innovative Connexions, we specialize in crafting original, user-friendly mobile apps that drive engagement, streamline processes, and enhance brand visibility.",
+    },
+    {
+      id: 3,
+      title: "Web Development",
+      image: `${code}`,
+      description:
+        "We specialize in offering comprehensive web development solutions tailored to meet the unique needs of our clients. Our expert team of developers possesses a wealth of experience and technical expertise to craft dynamic and engaging websites that elevate your online presence.",
+    },
+    {
+      id: 4,
+      title: "Graphic Design",
+      image: `${ww}`,
+      description:
+        "From logos and branding materials to marketing collateral and digital assets, I offer a comprehensive range of design services tailored to suit your specific requirements.",
+    },
+    {
+      id: 5,
+      title: "Network Maintenance",
+      image: `${switches}`,
+      description:
+        "As a seasoned network administrator, I understand the critical role that technology plays in the success of your business, and I'm here to ensure that your network operates at peak performance.",
+    },
+    {
+      id: 6,
+      title: "Infrastructure Configuration",
+      image: `${server}`,
+      description:
+        "With a passion for technology and a knack for problem-solving, I specialize in keeping your IT infrastructure running smoothly and efficiently.",
+    },
+  ]);
+
   useEffect(() => {
     const slider = document.querySelector(".slider");
-
     const activate = (e) => {
       const items = document.querySelectorAll(".item");
 
@@ -38,109 +94,25 @@ const Carousel = () => {
       <div className="carousel-container">
         <main>
           <ul className="slider">
-            <li
-              className="item"
-              style={{ backgroundImage: `url(${black_techs})` }}
-            >
-              <div className="content">
-                <h2 className="title">"IT Consulting"</h2>
-                <p className="description">
-                  {" "}
-                  Unlock the full potential of your organization's IT
-                  infrastructure with our specialized consulting services. At
-                  Innovative Connexions, we understand that every business is
-                  unique, which is why we offer personalized IT consulting
-                  solutions tailored to your specific needs and goals.{" "}
-                </p>
-                <button>Read More</button>
-              </div>
-            </li>
-            <li
-              className="item"
-              style={{
-                backgroundImage: `url(${apps})`,
-              }}
-            >
-              <div className="content">
-                <h2 className="title">"Mobile Applications"</h2>
-                <p className="description">
-                  {" "}
-                  Elevate your business with custom-designed mobile applications
-                  that cater to your unique needs and objectives. At Innovative
-                  Connexions, we specialize in crafting original, user-friendly
-                  mobile apps that drive engagement, streamline processes, and
-                  enhance brand visibility.{" "}
-                </p>
-                <button>Read More</button>
-              </div>
-            </li>
-            <li
-              className="item"
-              style={{
-                backgroundImage: `url(${code})`,
-              }}
-            >
-              <div className="content">
-                <h2 className="title">"Web Development"</h2>
-                <p className="description">
-                  {" "}
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Tempore fuga voluptatum, iure corporis inventore praesentium
-                  nisi. Id laboriosam ipsam enim.{" "}
-                </p>
-                <button>Read More</button>
-              </div>
-            </li>
-            <li
-              className="item"
-              style={{
-                backgroundImage: `url(${ww})`,
-              }}
-            >
-              <div className="content">
-                <h2 className="title">"Graphic Design"</h2>
-                <p className="description">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Tempore fuga voluptatum, iure corporis inventore praesentium
-                  nisi. Id laboriosam ipsam enim.
-                </p>
-                <button>Read More</button>
-              </div>
-            </li>
-            <li
-              className="item"
-              style={{
-                backgroundImage: `url(${switches})`,
-              }}
-            >
-              <div className="content">
-                <h2 className="title">"Network Maintenance"</h2>
-                <p className="description">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Tempore fuga voluptatum, iure corporis inventore praesentium
-                  nisi. Id laboriosam ipsam enim.
-                </p>
-                <button>Read More</button>
-              </div>
-            </li>
-            <li
-              className="item"
-              style={{
-                backgroundImage: `url(${server})`,
-              }}
-            >
-              <div className="content">
-                <h2 className="title">"Infrastructure Configuration"</h2>
-                <p className="description">
-                  {" "}
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Tempore fuga voluptatum, iure corporis inventore praesentium
-                  nisi. Id laboriosam ipsam enim.{" "}
-                </p>
-                <button>Read More</button>
-              </div>
-            </li>
+            {services.map((service) => {
+              return (
+                <li
+                  className="item"
+                  key={service.id}
+                  style={{ backgroundImage: `url(${service.image})` }}
+                >
+                  <div className="content" id={service.id}>
+                    <h2 className="title">{service.title}</h2>
+                    <p className="description"> {service.description} </p>
+                    <button onClick={() => openModal(service)}>
+                      Read More
+                    </button>
+                  </div>
+                </li>
+              );
+            })}
           </ul>
+
           <nav className="carousel-nav">
             <button className="btn prev" name="arrow-back-outline">
               &#8249;
@@ -151,6 +123,15 @@ const Carousel = () => {
           </nav>
         </main>
       </div>
+      {showModal && selectedService && (
+        <Modal
+          id={selectedService.id}
+          title={selectedService.title}
+          description={selectedService.description}
+          image={selectedService.image}
+          closeModal={closeModal}
+        />
+      )}
     </>
   );
 };
