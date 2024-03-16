@@ -1,7 +1,7 @@
 import React from "react";
 import "./Modal.css";
 
-const Modal = ({ id, title, description, image, closeModal }) => {
+const Modal = ({ title, description, text, image, closeModal }) => {
   return (
     <aside className="modal-overlay">
       <div className="modal-container">
@@ -11,7 +11,7 @@ const Modal = ({ id, title, description, image, closeModal }) => {
             <h4>{title}</h4>
           </div>
           <div style={{ alignSelf: "center" }}>
-            <p>{description}</p>
+            <p>{text}</p>
           </div>
           <div style={{ alignSelf: "center" }}>
             <button className="btn btn-hipster close-btn" onClick={closeModal}>
