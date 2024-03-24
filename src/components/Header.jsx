@@ -1,7 +1,14 @@
 import React, { useState } from "react";
 import imageLogo from "../images/IC_LLC.png";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
+  const activeStyles = {
+    fontWeight: "bold",
+    textDecoration: "underline",
+    color: "#0575e6",
+  };
+
   const [showLinks, setShowLinks] = useState(false);
   const navToggle = (event) => {
     setShowLinks((current) => !current);
@@ -17,12 +24,18 @@ const Header = () => {
         </div>
         {/* links */}
         <ul className={showLinks ? "links show-links" : "links"}>
-          <li>
-            <a href="index.html">home</a>
-          </li>
-          <li>
-            <a href="about.html">about</a>
-          </li>
+          <NavLink
+            to="/"
+            style={({ isActive }) => (isActive ? activeStyles : null)}
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="about"
+            style={({ isActive }) => (isActive ? activeStyles : null)}
+          >
+            About
+          </NavLink>
           <li>
             <a href="projects.html">projects</a>
           </li>

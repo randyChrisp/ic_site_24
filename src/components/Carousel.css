@@ -195,3 +195,67 @@ main {
     }
   }
 }
+
+/* About */
+
+.about {
+  display: grid;
+  place-items: center;
+  /* padding: 2rem; */
+  text-align: center;
+}
+
+.about-img {
+  height: 40vh;
+  width: 80vw;
+  z-index: 0;
+}
+
+.about-modals {
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+  width: 100%;
+}
+
+.div1 {
+  /* margin: 15px; */
+  width: 100%;
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-around;
+}
+
+.div1 h3 {
+  text-transform: uppercase;
+}
+
+.intro {
+  display: flex;
+  padding: 1em;
+  border-style: solid;
+  border-image-source: linear-gradient(to right, #0575e6, #00f260, #0575e6);
+  border-image-slice: 1;
+  border-radius: 4px;
+}
+
+.about-us {
+  padding: 1em;
+  border-style: solid;
+  border-image-source: linear-gradient(to right, #0575e6, #00f260, #0575e6);
+  border-image-slice: 1;
+}
+
+.skills {
+  padding: 1em;
+  border-style: solid;
+  border-image-source: linear-gradient(to right, #0575e6, #00f260, #0575e6);
+  border-image-slice: 1;
+}
+
+.contact {
+  padding: 1em;
+  border-style: solid;
+  border-image-source: linear-gradient(to right, #0575e6, #00f260, #0575e6);
+  border-image-slice: 1;
+}

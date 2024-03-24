@@ -88,14 +88,14 @@ body {
   font-family: var(--ff-sans-normal);
   font-size: var(--fs-400);
   color: hsl(var(--clr-white));
-  background-color: hsl(var(--clr-dark));
+  background-color: black;
   line-height: 1.5;
   min-height: 100vh;
 
   display: grid;
   grid-template-rows: min-content 1fr;
 
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 /* make images easier to work with */
@@ -292,8 +292,11 @@ a {
 }
 
 nav {
-  background: var(--clr-white);
+  background: black;
   box-shadow: var(--light-shadow);
+}
+.carousel-nav {
+  background-color: transparent;
 }
 .nav-header {
   display: flex;
@@ -382,11 +385,11 @@ nav {
   }
 
   /* ------------------- */
-  /*      Home          */
+  /*      Carousel       */
   /* ------------------- */
 
-  .home {
-    background-color: var(--clr-white);
+  .carousel-container {
+    overflow: hidden;
   }
 
   /* ------------------- */
