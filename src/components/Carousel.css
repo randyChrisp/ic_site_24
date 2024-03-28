@@ -212,6 +212,7 @@ main {
 }
 
 .about-modals {
+  margin: 16px;
   display: flex;
   flex-direction: column;
   height: 40vh;
