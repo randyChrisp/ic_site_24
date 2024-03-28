@@ -208,7 +208,7 @@ main {
 .about-img {
   height: 40vh;
   width: 80vw;
-  z-index: 0;
+  z-index: -1;
 }
 
 .about-modals {
@@ -231,31 +231,113 @@ main {
 }
 
 .intro {
-  display: flex;
+  position: relative;
   padding: 1em;
-  border-style: solid;
-  border-image-source: linear-gradient(to right, #0575e6, #00f260, #0575e6);
-  border-image-slice: 1;
+  background: linear-gradient(0deg, #000, #272727);
+}
+
+.intro:before,
+.intro:after {
+  content: "";
+  position: absolute;
   border-radius: 4px;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(45deg, #0575e6, #00f260, #0575e6);
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: steam 10s linear infinite;
+}
+
+.intro:after {
+  filter: blur(50px);
 }
 
 .about-us {
+  position: relative;
   padding: 1em;
-  border-style: solid;
-  border-image-source: linear-gradient(to right, #0575e6, #00f260, #0575e6);
-  border-image-slice: 1;
+  background: linear-gradient(0deg, #000, #272727);
+}
+
+.about-us:before,
+.about-us:after {
+  content: "";
+  position: absolute;
+  border-radius: 4px;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(45deg, #0575e6, #00f260, #0575e6);
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: steam 10s linear infinite;
+}
+
+.about-us:after {
+  filter: blur(50px);
 }
 
 .skills {
+  position: relative;
   padding: 1em;
-  border-style: solid;
-  border-image-source: linear-gradient(to right, #0575e6, #00f260, #0575e6);
-  border-image-slice: 1;
+  background: linear-gradient(0deg, #000, #272727);
+}
+
+.skills:before,
+.skills:after {
+  content: "";
+  position: absolute;
+  border-radius: 4px;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(45deg, #0575e6, #00f260, #0575e6);
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: steam 10s linear infinite;
+}
+
+.skills:after {
+  filter: blur(50px);
 }
 
 .contact {
+  position: relative;
   padding: 1em;
-  border-style: solid;
-  border-image-source: linear-gradient(to right, #0575e6, #00f260, #0575e6);
-  border-image-slice: 1;
+  background: linear-gradient(0deg, #000, #272727);
+}
+
+.contact:before,
+.contact:after {
+  content: "";
+  position: absolute;
+  border-radius: 4px;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(45deg, #0575e6, #00f260, #0575e6);
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: steam 10s linear infinite;
+}
+
+.contact:after {
+  filter: blur(50px);
+}
+
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
