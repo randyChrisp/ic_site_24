@@ -220,10 +220,8 @@ main {
 }
 
 .div1 {
-  /* margin: 15px; */
   width: 100%;
   display: flex;
-  /* flex-wrap: wrap; */
   justify-content: space-around;
 }
 
@@ -231,14 +229,21 @@ main {
   text-transform: uppercase;
 }
 
-.intro {
+.option {
   position: relative;
   padding: 1em;
   background: linear-gradient(0deg, #000, #272727);
+
+  & button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
 }
 
-.intro:before,
-.intro:after {
+.option:before,
+.option:after {
   content: "";
   position: absolute;
   border-radius: 4px;
@@ -252,82 +257,7 @@ main {
   animation: steam 10s linear infinite;
 }
 
-.intro:after {
-  filter: blur(50px);
-}
-
-.about-us {
-  position: relative;
-  padding: 1em;
-  background: linear-gradient(0deg, #000, #272727);
-}
-
-.about-us:before,
-.about-us:after {
-  content: "";
-  position: absolute;
-  border-radius: 4px;
-  left: -2px;
-  top: -2px;
-  background: linear-gradient(45deg, #0575e6, #00f260, #0575e6);
-  background-size: 400%;
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  z-index: -1;
-  animation: steam 10s linear infinite;
-}
-
-.about-us:after {
-  filter: blur(50px);
-}
-
-.skills {
-  position: relative;
-  padding: 1em;
-  background: linear-gradient(0deg, #000, #272727);
-}
-
-.skills:before,
-.skills:after {
-  content: "";
-  position: absolute;
-  border-radius: 4px;
-  left: -2px;
-  top: -2px;
-  background: linear-gradient(45deg, #0575e6, #00f260, #0575e6);
-  background-size: 400%;
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  z-index: -1;
-  animation: steam 10s linear infinite;
-}
-
-.skills:after {
-  filter: blur(50px);
-}
-
-.contact {
-  position: relative;
-  padding: 1em;
-  background: linear-gradient(0deg, #000, #272727);
-}
-
-.contact:before,
-.contact:after {
-  content: "";
-  position: absolute;
-  border-radius: 4px;
-  left: -2px;
-  top: -2px;
-  background: linear-gradient(45deg, #0575e6, #00f260, #0575e6);
-  background-size: 400%;
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  z-index: -1;
-  animation: steam 10s linear infinite;
-}
-
-.contact:after {
+.option:after {
   filter: blur(50px);
 }
 
