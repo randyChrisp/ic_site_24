@@ -94,8 +94,6 @@ body {
 
   display: grid;
   grid-template-rows: min-content 1fr;
-
-  /* overflow: hidden; */
 }
 
 /* make images easier to work with */
@@ -302,7 +300,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* padding: 1rem; */
 }
 .nav-toggle {
   font-size: 1.5rem;
@@ -335,6 +332,22 @@ nav {
 }
 .social-icons {
   display: none;
+}
+footer {
+  display: flex;
+  justify-content: space-evenly;
+}
+.footer-icons {
+  display: flex;
+  margin: 0;
+}
+.footer-icons a {
+  margin: 0 0.5rem;
+  color: var(--clr-primary-5);
+  transition: var(--transition);
+}
+.footer-icons a:hover {
+  color: var(--clr-primary-7);
 }
 .links {
   height: 0;
@@ -382,6 +395,9 @@ nav {
   }
   .social-icons a:hover {
     color: var(--clr-primary-7);
+  }
+  .footer-icons {
+    display: none;
   }
 
   /* ------------------- */
