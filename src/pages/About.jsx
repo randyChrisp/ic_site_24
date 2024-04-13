@@ -4,9 +4,6 @@ import Modal from "../components/Modal";
 import office from "../images/office2.png";
 import logo from "../images/logoModal.png";
 import simple from "../images/simple.png";
-import darkLaptop from "../images/laptop-dark.jpg";
-import deskLaptop from "../images/laptop-desk.jpg";
-import monitors from "../images/keyboard-monitors.jpg";
 import great from "../images/great.jpg";
 import earth from "../images/earth.jpg";
 

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Carousel.css";
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState } from "react";
 import apps from "../images/pexels-apps.jpg";
 import black_techs from "../images/black_techs.jpg";
 import code from "../images/html.jpg";

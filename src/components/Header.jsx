@@ -31,17 +31,17 @@ const Header = () => {
             Home
           </NavLink>
           <NavLink
+            to="projects"
+            style={({ isActive }) => (isActive ? activeStyles : null)}
+          >
+            Projects
+          </NavLink>
+          <NavLink
             to="about"
             style={({ isActive }) => (isActive ? activeStyles : null)}
           >
             About
           </NavLink>
-          <li>
-            <a href="projects.html">projects</a>
-          </li>
-          <li>
-            <a href="contact.html">contact</a>
-          </li>
         </ul>
         {/* social media */}
         <ul className="social-icons">

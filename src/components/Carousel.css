@@ -269,6 +269,7 @@ main {
       opacity: 0;
     }
   }
+
   .div1 {
     flex-direction: column;
   }
@@ -278,9 +279,6 @@ main {
   .about-modals {
     height: auto;
   }
-  /* footer {
-    margin-top: 50px;
-  } */
   .option {
     margin-bottom: 10px;
   }
