@@ -6,20 +6,18 @@ import cocktails from "../images/cocktails.jpg";
 import sale from "../images/sale.jpg";
 import weather from "../images/weather3.jpg";
 import tic_tac_toe from "../images/tic-tac-toe.jpg";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const openLink = (project) => {
-    setSelectedProject(project);
-  };
   const [projects, setProjects] = useState([
     {
       id: 1,
       name: "Stocks App",
       description: "This is a project",
       image: `${stocks}`,
-      link: "https://www.google.com",
+      link: "/stocks",
     },
     {
       id: 2,
@@ -47,6 +45,9 @@ const Projects = () => {
       image: `${tic_tac_toe}`,
     },
   ]);
+  const openLink = (project) => {
+    setSelectedProject(project);
+  };
 
   useEffect(() => {
     const activate = (e) => {
@@ -85,8 +86,10 @@ const Projects = () => {
                   <div className="content" id={project.id}>
                     <h2 className="name">{project.name}</h2>
                     <p className="description"> {project.description} </p>
-                    <button onClick={() => openLink(project.link)}>
-                      Go To Project
+                    <button>
+                      <Link style={{ color: "white" }} to={project.link}>
+                        Go To Project
+                      </Link>
                     </button>
                   </div>
                 </li>

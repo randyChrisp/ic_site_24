@@ -42,6 +42,12 @@ const Header = () => {
           >
             About
           </NavLink>
+          {/* <NavLink
+            to="stocks"
+            style={({ isActive }) => (isActive ? activeStyles : null)}
+          >
+            Stocks
+          </NavLink> */}
         </ul>
         {/* social media */}
         <ul className="social-icons">

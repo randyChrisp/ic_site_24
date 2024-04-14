@@ -1,5 +1,18 @@
-import React from "react";
+import { AutoComplete } from "../components/AutoComplete";
+import { StockList } from "../components/StockList";
+import graph from "../../../images/graph.png";
+import "./StockApp.css";
 
-const StockList = () => {};
+const StockOverviewPage = () => {
+  return (
+    <div>
+      <div className="graph">
+        <img src={graph} />
+      </div>
+      <AutoComplete />
+      <StockList />
+    </div>
+  );
+};
 
-export default StockList;
+export default StockOverviewPage;
