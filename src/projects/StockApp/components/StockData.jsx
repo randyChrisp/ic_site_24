@@ -4,6 +4,7 @@ import "../pages/StockApp.css";
 
 const StockData = ({ symbol }) => {
   const [stockData, setStockData] = useState();
+
   useEffect(() => {
     let isMounted = true;
     const fetchData = async () => {
@@ -17,7 +18,9 @@ const StockData = ({ symbol }) => {
         if (isMounted) {
           setStockData(response.data);
         }
-      } catch (err) {}
+      } catch (err) {
+        console.log(err);
+      }
     };
     fetchData();
     return () => (isMounted = false);
@@ -65,7 +68,7 @@ const StockData = ({ symbol }) => {
             </div>
             <div>
               <span className="fw-bold">URL: </span>
-              <a href={stockData.weburl}>{stockData.name}</a>
+              <a href={stockData.weburl}>{stockData.weburl}</a>
             </div>
           </div>
         </div>

@@ -70,7 +70,7 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a href="www.linkedin.com/in/randy-chrisp" target="_blank">
+            <a href="https://www.linkedin.com/in/randy-chrisp" target="_blank">
               <i className="fab fa-linkedin"></i>
             </a>
           </li>

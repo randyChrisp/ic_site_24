@@ -6,8 +6,8 @@ import { BsFillCaretDownFill, BsFillCaretUpFill } from "react-icons/bs";
 import "../pages/StockApp.css";
 
 export const StockList = () => {
-  const [stock, setStock] = useState(["GOOGL", "MSFT", "AMZN"]);
-  const { watchList, addStock, deleteStock } = useContext(WatchListContext);
+  const [stock, setStock] = useState([]);
+  const { watchList, deleteStock } = useContext(WatchListContext);
   const navigate = useNavigate();
 
   const changeColor = (change) => {
@@ -21,7 +21,6 @@ export const StockList = () => {
   useEffect(() => {
     let isMounted = true;
     const fetchData = async () => {
-      const responses = [];
       try {
         const responses = await Promise.all(
           watchList.map((stock) => {
@@ -32,12 +31,15 @@ export const StockList = () => {
             });
           })
         );
+
+        console.log(responses);
         const data = responses.map((response) => {
           return {
             data: response.data,
             symbol: response.config.params.symbol,
           };
         });
+        console.log(data);
         if (isMounted) {
           setStock(data);
         }
@@ -54,7 +56,7 @@ export const StockList = () => {
   return (
     <div>
       <table className="table hover mt-5">
-        <thead style={{ color: "rgb(79,89,102)" }}>
+        <thead style={{ color: "white" }}>
           <tr>
             <th scope="col">Name</th>
             <th scope="col">Last</th>
@@ -76,20 +78,20 @@ export const StockList = () => {
                 key={stockData.symbol}
               >
                 <th scope="row">{stockData.symbol}</th>
-                <td>{stockData.data}</td>
-                <td className={`text-${changeColor(stockData.data)}`}>
-                  {stockData.data}
-                  {renderIcon(stockData.data)}
+                <td>{stockData.data.c}</td>
+                <td className={`text-${changeColor(stockData.data.d)}`}>
+                  {stockData.data.d}
+                  {renderIcon(stockData.data.d)}
                 </td>
-                <td className={`text-${changeColor(stockData.data)}`}>
-                  {stockData.data}
-                  {renderIcon(stockData.data)}
+                <td className={`text-${changeColor(stockData.data.d)}`}>
+                  {stockData.data.dp}
+                  {renderIcon(stockData.data.d)}
                 </td>
-                <td>{stockData.data}</td>
-                <td>{stockData.data}</td>
-                <td>{stockData.data}</td>
+                <td>{stockData.data.h}</td>
+                <td>{stockData.data.l}</td>
+                <td>{stockData.data.o}</td>
                 <td>
-                  {stockData.data}
+                  {stockData.data.pc}
                   <button
                     className="btn btn-danger btn-sm ml-3 d-inline-block 
                   delete-button"
