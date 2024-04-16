@@ -23,3 +23,9 @@ main {
 footer {
   display: none;
 }
+
+@media (width < 650px) {
+  .table {
+    width: 80vw;
+  }
+}

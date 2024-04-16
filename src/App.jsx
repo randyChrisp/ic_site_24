@@ -23,7 +23,10 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/stocks" element={<StockOverviewPage />} />
-            <Route path="/stocks/:symbol" element={<StockDetailPage />} />
+            <Route
+              path="/stocks/detail/:symbol"
+              element={<StockDetailPage />}
+            />
           </Routes>
           <Footer />
         </div>
