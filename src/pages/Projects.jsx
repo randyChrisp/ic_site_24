@@ -24,7 +24,7 @@ const Projects = () => {
       name: "Cocktails App",
       description: "This is another project",
       image: `${cocktails}`,
-      link: "https://www.google.com",
+      link: "/cocktails",
     },
     {
       id: 3,

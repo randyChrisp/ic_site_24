@@ -1,17 +1,18 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { WatchListContextProvider } from "./context/watchListContext";
-import StockDetailPage from "./projects/StockApp/pages/StockDetailPage";
-import StockOverviewPage from "./projects/StockApp/pages/StockOverviewPage";
 import Header from "./components/Header";
-import Carousel from "./components/Carousel";
-import Projects from "./pages/Projects";
-import About from "./pages/About";
 import Footer from "./components/Footer";
 import Loader from "./components/Loader";
+import Carousel from "./components/Carousel";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+import StockOverviewPage from "./projects/StockApp/pages/StockOverviewPage";
+import StockDetailPage from "./projects/StockApp/pages/StockDetailPage";
+import CocktailsPage from "./projects/CocktailApp/pages/CocktailsPage";
 import "./App.css";
 
-function App() {
+export default function App() {
   return (
     <>
       <WatchListContextProvider>
@@ -27,6 +28,7 @@ function App() {
               path="/stocks/detail/:symbol"
               element={<StockDetailPage />}
             />
+            <Route path="/cocktails" element={<CocktailsPage />} />
           </Routes>
           <Footer />
         </div>
@@ -34,5 +36,3 @@ function App() {
     </>
   );
 }
-
-export default App;
