@@ -100,8 +100,6 @@ export const CocktailContextProvider = ({ children }) => {
     localStorage.setItem("favorites", JSON.stringify(newFavorites));
   };
 
-  // const fetchIngredients = (selectedDrink) => {};
-
   return (
     <CocktailContext.Provider
       value={{
