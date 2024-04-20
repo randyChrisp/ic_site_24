@@ -10,7 +10,7 @@ export const useGlobalContext = () => {
 const getFavoritesFromLocalStorage = () => {
   let favorites = localStorage.getItem("favorites");
   if (favorites) {
-    favorites = JSON.parse("favorites");
+    favorites = JSON.parse(localStorage.getItem("favorites"));
   } else favorites = [];
   return favorites;
 };
@@ -21,6 +21,7 @@ const randomDrink = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
 
 export const CocktailContextProvider = ({ children }) => {
   const [drinks, setDrinks] = useState([]);
+  const [ingredients, setIngredients] = useState([]);
   const [loading, setLoading] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [showCocktailModal, setShowCocktailModal] = useState(false);
@@ -66,6 +67,16 @@ export const CocktailContextProvider = ({ children }) => {
       drink = drinks.find((item) => item.idDrink === idDrink);
     }
 
+    if (drink) {
+      const ingredients = Object.keys(drink)
+        .filter((key) => key.startsWith("strIngredient") && drink[key] !== null)
+        .map((key) => drink[key]);
+      setIngredients(ingredients);
+      console.log(ingredients);
+    } else {
+      console.log("Error: Unable to retrieve drinks data from the API");
+    }
+
     setSelectedDrink(drink);
     setShowCocktailModal(true);
   };
@@ -89,10 +100,13 @@ export const CocktailContextProvider = ({ children }) => {
     localStorage.setItem("favorites", JSON.stringify(newFavorites));
   };
 
+  // const fetchIngredients = (selectedDrink) => {};
+
   return (
     <CocktailContext.Provider
       value={{
         drinks,
+        ingredients,
         loading,
         searchTerm,
         setSearchTerm,

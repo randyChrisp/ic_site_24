@@ -2,13 +2,12 @@ import { useGlobalContext } from "../../../context/cocktailContext";
 import "../Cocktails.css";
 
 const CocktailModal = () => {
-  const { selectedDrink, closeCocktailModal } = useGlobalContext();
+  const { selectedDrink, closeCocktailModal, ingredients } = useGlobalContext();
 
   const {
     strDrinkThumb: image,
     strDrink: title,
     strInstructions: text,
-    strSource: source,
   } = selectedDrink;
 
   return (
@@ -17,12 +16,16 @@ const CocktailModal = () => {
         <img src={image} alt={title} className="img modal-img" />
         <div className="modal-content">
           <h4>{title}</h4>
-          <p>Cooking Instructions</p>
+          <p>Instructions</p>
           <p>{text}</p>
-          <a href={source} target="_blank">
-            Original Source
-          </a>
-          <button className="btn btn-hipster close-btn" onClick={closeModal}>
+          <p>Ingredients:</p>
+          <ul style={{ display: "inline-flex", alignSelf: "center" }}>
+            <li>{ingredients.filter((item) => item).join(", ")}</li>
+          </ul>
+          <button
+            className="btn btn-hipster close-btn"
+            onClick={closeCocktailModal}
+          >
             Close
           </button>
         </div>
