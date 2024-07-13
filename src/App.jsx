@@ -11,7 +11,6 @@ import CapStatement from "./pages/CapStatement";
 import StockOverviewPage from "./projects/StockApp/pages/StockOverviewPage";
 import StockDetailPage from "./projects/StockApp/pages/StockDetailPage";
 import CocktailsPage from "./projects/CocktailApp/pages/CocktailsPage";
-import Balloons from "./components/Balloons";
 import "./App.css";
 
 export default function App() {
