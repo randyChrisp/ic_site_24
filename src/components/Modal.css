@@ -1,5 +1,6 @@
 :root {
   /* colors */
+  --primary-50: "transparent";
   --primary-100: #e6f0ff;
   --primary-200: #b4d3fe;
   --primary-300: #82b6fd;
@@ -61,11 +62,6 @@ body {
   line-height: 1.75;
   color: var(--textColor);
 }
-
-/* p {
-  margin-bottom: 1.5rem;
-  max-width: 40em;
-} */
 
 h1,
 h2,
@@ -137,6 +133,11 @@ ul {
 .btn:hover {
   background: var(--primary-700);
   box-shadow: var(--shadow-3);
+}
+.btn-outline {
+  color: var(--primary-500);
+  background: transparent;
+  border: 1px solid var(--primary-500);
 }
 .btn-hipster {
   color: var(--primary-500);

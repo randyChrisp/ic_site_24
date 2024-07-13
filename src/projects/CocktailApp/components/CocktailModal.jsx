@@ -16,10 +16,20 @@ const CocktailModal = () => {
         <img src={image} alt={title} className="img modal-img" />
         <div className="modal-content">
           <h4>{title}</h4>
-          <p>Instructions</p>
+          <p style={{ color: "black" }}>
+            <b>Instructions:</b>
+          </p>
           <p>{text}</p>
-          <p>Ingredients:</p>
-          <ul style={{ display: "inline-flex", alignSelf: "center" }}>
+          <p style={{ color: "black" }}>
+            <b>Ingredients:</b>
+          </p>
+          <ul
+            style={{
+              display: "inline-flex",
+              alignSelf: "center",
+              color: "#475569",
+            }}
+          >
             <li>{ingredients.filter((item) => item).join(", ")}</li>
           </ul>
           <button

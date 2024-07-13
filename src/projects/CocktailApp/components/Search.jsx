@@ -3,7 +3,8 @@ import { useState } from "react";
 import "../Cocktails.css";
 
 const Search = () => {
-  const { setSearchTerm, fetchRandomDrink } = useGlobalContext();
+  const { setSearchTerm, fetchRandomDrink, fetchDrinks, allDrinksUrl } =
+    useGlobalContext();
 
   const [text, setText] = useState("");
 
@@ -25,6 +26,11 @@ const Search = () => {
     fetchRandomDrink();
   };
 
+  const handleReset = () => {
+    setText("");
+    fetchDrinks(allDrinksUrl);
+  };
+
   return (
     <header className="search-container">
       <form onSubmit={handleSubmit}>
@@ -44,6 +50,9 @@ const Search = () => {
           onClick={handleRandomDrink}
         >
           Surprise me!
+        </button>
+        <button className="btn btn-outline" type="btn" onClick={handleReset}>
+          Reset
         </button>
       </form>
     </header>

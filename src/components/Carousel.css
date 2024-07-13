@@ -131,6 +131,13 @@ main {
   }
 }
 
+/* Cap Statement */
+.pdf {
+  height: 100%;
+  width: 100%;
+  aspect-ratio: 4/4;
+}
+
 /* About */
 
 .about {

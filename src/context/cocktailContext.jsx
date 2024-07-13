@@ -33,7 +33,6 @@ export const CocktailContextProvider = ({ children }) => {
     try {
       const response = await axios.get(url);
       const data = response.data;
-      console.log(data);
       if (data.drinks) {
         setDrinks(data.drinks);
       } else {
@@ -72,7 +71,6 @@ export const CocktailContextProvider = ({ children }) => {
         .filter((key) => key.startsWith("strIngredient") && drink[key] !== null)
         .map((key) => drink[key]);
       setIngredients(ingredients);
-      console.log(ingredients);
     } else {
       console.log("Error: Unable to retrieve drinks data from the API");
     }
@@ -104,6 +102,7 @@ export const CocktailContextProvider = ({ children }) => {
     <CocktailContext.Provider
       value={{
         drinks,
+        allDrinksUrl,
         ingredients,
         loading,
         searchTerm,

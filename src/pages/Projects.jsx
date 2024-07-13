@@ -14,10 +14,9 @@ const Projects = () => {
   const [projects, setProjects] = useState([
     {
       id: 1,
-      name: "Stocks App",
-      description: "This is a project",
-      image: `${stocks}`,
-      link: "/stocks",
+      name: "E-commerce App",
+      description: "This is another project",
+      image: `${sale}`,
     },
     {
       id: 2,
@@ -28,9 +27,10 @@ const Projects = () => {
     },
     {
       id: 3,
-      name: "E-commerce App",
-      description: "This is another project",
-      image: `${sale}`,
+      name: "Stocks App",
+      description: "This is a project",
+      image: `${stocks}`,
+      link: "/stocks",
     },
     {
       id: 4,
