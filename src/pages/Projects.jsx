@@ -17,6 +17,7 @@ const Projects = () => {
       name: "E-commerce App",
       description: "This is another project",
       image: `${sale}`,
+      link: "/notFound",
     },
     {
       id: 2,
@@ -37,12 +38,14 @@ const Projects = () => {
       name: "Weather App",
       description: "This is another project",
       image: `${weather}`,
+      link: "/notFound",
     },
     {
       id: 5,
       name: "Tic Tac Toe",
       description: "This is another project",
       image: `${tic_tac_toe}`,
+      link: "/notFound",
     },
   ]);
   const openLink = (project) => {

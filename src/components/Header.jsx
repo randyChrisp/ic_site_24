@@ -52,18 +52,21 @@ const Header = () => {
         {/* social media */}
         <ul className="social-icons">
           <li>
-            <a href="https://www.facebook.com/webwondersinc" target="_blank">
+            <a
+              href="https://www.facebook.com/innovativeconnexions"
+              target="_blank"
+            >
               <i className="fab fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a href="https://twitter.com/Web_Wonders_Inc" target="_blank">
+            <a href="https://x.com/_IC_LLC_" target="_blank">
               <i className="fab fa-twitter"></i>
             </a>
           </li>
           <li>
             <a
-              href="https://www.instagram.com/web_wonders_inc/"
+              href="https://www.instagram.com/innovative_connexions/"
               target="_blank"
             >
               <i className="fab fa-instagram"></i>

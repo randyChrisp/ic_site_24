@@ -8,6 +8,7 @@ import Carousel from "./components/Carousel";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import CapStatement from "./pages/CapStatement";
+import NotFound from "./pages/NotFound";
 import StockOverviewPage from "./projects/StockApp/pages/StockOverviewPage";
 import StockDetailPage from "./projects/StockApp/pages/StockDetailPage";
 import CocktailsPage from "./projects/CocktailApp/pages/CocktailsPage";
@@ -31,6 +32,7 @@ export default function App() {
               element={<StockDetailPage />}
             />
             <Route path="/cocktails" element={<CocktailsPage />} />
+            <Route path="/notFound" element={<NotFound />} />
           </Routes>
           <Footer />
         </div>
