@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import imageLogo from "../images/IC_LLC.png";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const activeStyles = {
