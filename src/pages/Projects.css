@@ -133,7 +133,7 @@ main {
 
 @media (width > 650px) and (width < 900px) {
   .content {
-    & .title {
+    & .name {
       font-size: 1rem;
     }
     & .description {
@@ -165,7 +165,7 @@ main {
 
 @media (width < 650px) {
   .content {
-    & .title {
+    & .name {
       font-size: 0.9rem;
     }
     & .description {

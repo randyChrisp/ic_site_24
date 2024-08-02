@@ -6,47 +6,56 @@ import cocktails from "../images/cocktails.jpg";
 import sale from "../images/sale.jpg";
 import weather from "../images/weather3.jpg";
 import tic_tac_toe from "../images/tic-tac-toe.jpg";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const openLink = (project) => {
-    setSelectedProject(project);
-  };
   const [projects, setProjects] = useState([
     {
       id: 1,
-      name: "Stocks App",
-      description: "This is a project",
-      image: `${stocks}`,
-      link: "https://www.google.com",
+      name: "ShopEase Demo",
+      description:
+        "ShopEase Demo is a feature-rich web application designed to showcase the functionality of a modern online store.",
+      image: `${sale}`,
+      link: "/notFound",
     },
     {
       id: 2,
-      name: "Cocktails App",
-      description: "This is another project",
+      name: "CocktailFinder",
+      description:
+        "CocktailFinder is an innovative web application that allows users to search for cocktails by name and access detailed recipes.",
       image: `${cocktails}`,
-      link: "https://www.google.com",
+      link: "/cocktails",
     },
     {
       id: 3,
-      name: "E-commerce App",
-      description: "This is another project",
-      image: `${sale}`,
+      name: "StockView",
+      description:
+        "StockView is a dynamic web application designed to provide comprehensive stock market details.",
+      image: `${stocks}`,
+      link: "/stocks",
     },
     {
       id: 4,
-      name: "Weather App",
-      description: "This is another project",
+      name: "WeatherNow",
+      description:
+        "WeatherNow is a user-centric web application that delivers accurate and timely weather information based on user input.",
       image: `${weather}`,
+      link: "/notFound",
     },
     {
       id: 5,
-      name: "Tic Tac Toe",
-      description: "This is another project",
+      name: "TicTacToeMaster",
+      description:
+        "TicTacToeMaster is a sleek web application that lets users play the classic game of tic-tac-toe against a computer opponent.",
       image: `${tic_tac_toe}`,
+      link: "/notFound",
     },
   ]);
+  const openLink = (project) => {
+    setSelectedProject(project);
+  };
 
   useEffect(() => {
     const activate = (e) => {
@@ -85,8 +94,10 @@ const Projects = () => {
                   <div className="content" id={project.id}>
                     <h2 className="name">{project.name}</h2>
                     <p className="description"> {project.description} </p>
-                    <button onClick={() => openLink(project.link)}>
-                      Go To Project
+                    <button>
+                      <Link style={{ color: "white" }} to={project.link}>
+                        Go To Project
+                      </Link>
                     </button>
                   </div>
                 </li>

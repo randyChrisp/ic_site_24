@@ -1,0 +1,10 @@
+@media screen and (width < 800px) {
+  .footer-links {
+    display: grid;
+    justify-content: center;
+
+    & .footer-icons {
+      justify-content: center;
+    }
+  }
+}

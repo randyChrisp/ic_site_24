@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import imageLogo from "../images/IC_LLC.png";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const activeStyles = {
@@ -42,29 +42,38 @@ const Header = () => {
           >
             About
           </NavLink>
+          <NavLink
+            to="cap"
+            style={({ isActive }) => (isActive ? activeStyles : null)}
+          >
+            Capability Statement
+          </NavLink>
         </ul>
         {/* social media */}
         <ul className="social-icons">
           <li>
-            <a href="https://www.facebook.com/webwondersinc" target="_blank">
+            <a
+              href="https://www.facebook.com/innovativeconnexions"
+              target="_blank"
+            >
               <i className="fab fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a href="https://twitter.com/Web_Wonders_Inc" target="_blank">
+            <a href="https://x.com/_IC_LLC_" target="_blank">
               <i className="fab fa-twitter"></i>
             </a>
           </li>
           <li>
             <a
-              href="https://www.instagram.com/web_wonders_inc/"
+              href="https://www.instagram.com/innovative_connexions/"
               target="_blank"
             >
               <i className="fab fa-instagram"></i>
             </a>
           </li>
           <li>
-            <a href="www.linkedin.com/in/randy-chrisp" target="_blank">
+            <a href="https://www.linkedin.com/in/randy-chrisp" target="_blank">
               <i className="fab fa-linkedin"></i>
             </a>
           </li>

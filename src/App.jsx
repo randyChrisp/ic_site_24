@@ -1,24 +1,42 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import { WatchListContextProvider } from "./context/watchListContext";
 import Header from "./components/Header";
-import Carousel from "./components/Carousel";
-import Projects from "./pages/Projects";
-import About from "./pages/About";
 import Footer from "./components/Footer";
+import Loader from "./components/Loader";
+import Carousel from "./components/Carousel";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+import CapStatement from "./pages/CapStatement";
+import NotFound from "./pages/NotFound";
+import StockOverviewPage from "./projects/StockApp/pages/StockOverviewPage";
+import StockDetailPage from "./projects/StockApp/pages/StockDetailPage";
+import CocktailsPage from "./projects/CocktailApp/pages/CocktailsPage";
 import "./App.css";
 
-function App() {
+export default function App() {
   return (
     <>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Carousel />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-      </Routes>
-      <Footer />
+      <WatchListContextProvider>
+        <Loader />
+        <div>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Carousel />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/cap" element={<CapStatement />} />
+            <Route path="/stocks" element={<StockOverviewPage />} />
+            <Route
+              path="/stocks/detail/:symbol"
+              element={<StockDetailPage />}
+            />
+            <Route path="/cocktails" element={<CocktailsPage />} />
+            <Route path="/notFound" element={<NotFound />} />
+          </Routes>
+          <Footer />
+        </div>
+      </WatchListContextProvider>
     </>
   );
 }
-
-export default App;

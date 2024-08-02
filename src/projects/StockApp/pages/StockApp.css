@@ -1,0 +1,31 @@
+main {
+  background-color: #f0f0f0;
+}
+
+.delete-button {
+  visibility: hidden;
+  display: inline-block;
+}
+
+.table-row {
+  color: #f0f0f0;
+}
+
+.table-row:hover .delete-button {
+  visibility: visible;
+}
+
+.graph {
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  display: none;
+}
+
+@media (width < 650px) {
+  .table {
+    width: 80vw;
+  }
+}
